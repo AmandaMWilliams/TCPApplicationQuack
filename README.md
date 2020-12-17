@@ -24,6 +24,7 @@ Use Spring Initializr to create a starting point
 ## TCP Application
 
 User Stories to Fulfill
+
 As a client, (not logged in) I can:
  - send messages to a peer.
  - view default channels

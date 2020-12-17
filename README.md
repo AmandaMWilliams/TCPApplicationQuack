@@ -8,7 +8,7 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 
 ## Developmental Notes
 
-### Minimum Tech Stack
+### Tech Stack
 
 * Wireframe - Mockflow
 * Frontend - Angular / React
@@ -19,7 +19,7 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 
 ## Installation
 
-Use Spring Initializr to create an starting point for you application
+Use Spring Initializr to create a starting point
 
 ## TCP Application
 

@@ -1,14 +1,14 @@
 # TCPApplicationQuack
 
-// Micro Web Application - Server
+\\ Micro Web Application - Server
 
 Objective - to create an implementation of a small web service
 Purpose - to demonstrate the construction of a full-stacked web-application
 
 
-// Developmental Notes
+\\ Developmental Notes
 
-//// Minimum Tech Stack
+\\\\ Minimum Tech Stack
 
 * Wireframe - Mockflow
 * Frontend - Angular / React
@@ -17,11 +17,11 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 * Cloud - Heroku/AWS/Google
 
 
-// Installation
+\\ Installation
 
 Use Spring Initializr to create an starting point for you application
 
-// TCP Application
+\\ TCP Application
 
 * User Stories to Fulfill
 * As a client, (not logged in) I can:

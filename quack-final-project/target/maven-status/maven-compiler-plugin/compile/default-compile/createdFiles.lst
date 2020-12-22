@@ -1,0 +1,5 @@
+quack/finalproject/models/User.class
+quack/finalproject/repositories/UserRepository.class
+quack/finalproject/services/UserService.class
+quack/finalproject/FinalProjectApplication.class
+quack/finalproject/controllers/UserController.class

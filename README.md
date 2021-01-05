@@ -11,10 +11,10 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 ### Tech Stack
 
 * Wireframe - Mockflow
-* Frontend - Angular / React
+* Frontend - React
 * Business Logic - Java
 * Data Layer - MySQL
-* Cloud - Heroku/AWS/Google
+* Cloud - Heroku/AWS
 
 
 ## Installation

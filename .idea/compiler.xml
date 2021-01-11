@@ -14,7 +14,7 @@
         <module name="finalprojectparallel" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="finalprojectparallel" target="1.8" />
     </bytecodeTargetLevel>
   </component>

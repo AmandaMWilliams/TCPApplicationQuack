@@ -10,10 +10,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsUtils;
 import peter.finalprojectparallel.security.JwtAuthenticationFilter;
 
 /**
@@ -50,6 +52,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .authenticated();
         httpSecurity.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
+
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception{
+//        http
+//                .httpBasic().disable()
+//                .csrf().disable()
+//                .authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+//                .antMatchers("/api/auth/signup").permitAll()
+//                .antMatchers("/api/auth/signin").permitAll()
+//                .antMatchers(HttpMethod.GET,"/posts").permitAll()
+//                .antMatchers(HttpMethod.GET,"/posts/**").permitAll()
+//                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
+//                .anyRequest().authenticated().and()
+//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                .and().cors();
+//        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+//    }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {

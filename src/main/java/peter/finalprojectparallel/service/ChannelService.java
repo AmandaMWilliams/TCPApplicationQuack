@@ -24,7 +24,7 @@ public class ChannelService {
     private final ChannelRepository channelRepository;
     private final UserRepository userRepository;
     private final ChannelMapper channelMapper;
-    private final UserService userService;
+    private final AuthService authService;
 
     @Transactional
     public ChannelDto save(ChannelDto channelDto) {
@@ -42,7 +42,6 @@ public class ChannelService {
                 .collect(toList());
     }
 
-    //doesn't work properly
     @Transactional
     public ChannelDto addUserById(Long channelId, Long userId) {
         User user = userRepository.findById(userId)
@@ -67,22 +66,3 @@ public class ChannelService {
         return channelMapper.mapChannelToDto(channel);
     }
 }
-
-//  hand-written mapping methods made obsolete by mapstruct
-
-//    private ChannelDto mapToChannelDto(Channel channel) {
-//        return ChannelDto.builder()
-//                .channelName(channel.getChannelName())
-//                .channelId(channel.getChannelId())
-//                .description(channel.getDescription())
-//                .numberOfMessages(channel.getMessageList().size())
-//                .numberOfUsers(channel.getSubscribedUsers().size())
-//                .build();
-//    }
-
-//    private Channel mapChannelDto(ChannelDto channelDto) {
-//        return Channel.builder().channelName(channelDto.getChannelName())
-//                .description(channelDto.getDescription())
-//                .created(Instant.now())
-//                .build();
-//    }

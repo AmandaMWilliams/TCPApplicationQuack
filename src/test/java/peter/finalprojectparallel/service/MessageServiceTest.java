@@ -1,13 +1,12 @@
 package peter.finalprojectparallel.service;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import peter.finalprojectparallel.mapper.MessageMapper;
 import peter.finalprojectparallel.model.Message;
 import peter.finalprojectparallel.repository.ChannelRepository;
 import peter.finalprojectparallel.repository.MessageRepository;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MessageServiceTest {
 
@@ -22,7 +21,7 @@ public class MessageServiceTest {
     private AuthService authService = Mockito.mock(AuthService.class);
 
     @Test
-    void create() {
+    public void createTest() {
         MessageService messageService = new MessageService(
                 messageRepository, channelRepository, messageMapper, authService);
         Message message = new Message();
@@ -30,6 +29,14 @@ public class MessageServiceTest {
     }
 
     @Test
-    void getAllByChannel() {
+    void getAllByChannelTest() {
+        //given
+        MessageService messageService = new MessageService(messageRepository, channelRepository, messageMapper, authService);
+        Long channelID = 1l;
+        String givenMessage = "Hello";
+        //when
+        Boolean actual = messageService.getAllByChannel(channelID).contains(givenMessage);
+        //then
+        Assert.assertFalse(actual);
     }
 }

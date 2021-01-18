@@ -8,6 +8,9 @@ class FinalprojectparallelApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//given
+		//when
+		//then
 	}
 
 }

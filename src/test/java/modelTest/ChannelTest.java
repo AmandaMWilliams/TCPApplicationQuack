@@ -1,6 +1,5 @@
 package modelTest;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import peter.finalprojectparallel.model.Channel;
@@ -33,6 +32,7 @@ public class ChannelTest {
         Instant testInstant = Instant.now();
         User testUser = new User();
         Collection<User> testListOfSubscribers = new ArrayList<>();
+
         //when
         testChannel.setChannelId(testChannelId);
         testChannel.setChannelName(testChannelName);
@@ -42,62 +42,90 @@ public class ChannelTest {
         testChannel.setMessageList(testMessageList);
         testChannel.setUser(testUser);
         //then
-        Assertions.assertEquals(testChannelId, testChannel.getChannelId());
-        Assertions.assertEquals(testChannelName, testChannel.getChannelName());
-        Assertions.assertEquals(testInstant, testChannel.getCreated());
-        Assertions.assertEquals(testDescription, testChannel.getDescription());
-        Assertions.assertEquals(testUser, testChannel.getUser());
-        Assertions.assertEquals(testMessageList, testChannel.getMessageList());
-        Assertions.assertEquals(testListOfSubscribers, testChannel.getSubscribedUsers());
+        Assertions.assertNotNull(testChannel);
     }
 
     @Test
     public void getChannelIDTest() {
         //given
+        Channel testChannel = new Channel();
+        Long expected = 1L;
         //when
+        testChannel.setChannelId(expected);
+        Long actual = testChannel.getChannelId();
         //then
-
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getChannelNameTest() {
         //given
+        Channel testChannel = new Channel();
+        String expected = "MyTestChannel";
         //when
+        testChannel.setChannelName(expected);
+        String actual = testChannel.getChannelName();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getDescriptionTest() {
         //given
+        Channel testChannel = new Channel();
+        String expected = "This is a test";
         //when
+        testChannel.setDescription(expected);
+        String actual = testChannel.getDescription();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getMessageListTest() {
         //given
+        Channel testChannel = new Channel();
+        List<Message> expected = new ArrayList<>();
         //when
+        testChannel.setMessageList(expected);
+        List<Message> actual = testChannel.getMessageList();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getCreatedTest() {
         //given
+        Channel testChannel = new Channel();
+        Instant expected = Instant.now();
         //when
+        testChannel.setCreated(expected);
+        Instant actual = testChannel.getCreated();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getUserTest() {
         //given
+        Channel testChannel = new Channel();
+        User expected = new User();
         //when
+        testChannel.setUser(expected);
+        User actual = testChannel.getUser();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void getSubscribedUsersTest() {
         //given
+        Channel testChannel = new Channel();
+        Collection<User> expected = new ArrayList<>();
         //when
+        testChannel.setSubscribedUsers(expected);
+        Collection<User> actual = testChannel.getSubscribedUsers();
         //then
+        Assertions.assertEquals(expected, actual);
     }
 }

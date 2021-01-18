@@ -59,7 +59,7 @@ public class AuthService {
         //with our authorization path.
         mailService.sendMail(new NotificationEmail("Please activate your Quack account",
                 user.getEmail(), "Follow this link to complete your account activation" +
-                "http://localhost:8080/api/auth/accountVerification/" + token ));
+                "https://quack-final-project.herokuapp.com/api/auth/accountVerification/" + token ));
         //When the user pastes that url into their browser we take the token, look it up in our DB,
         //and if the token is valid for that user we complete their account verification
     }

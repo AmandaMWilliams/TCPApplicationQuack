@@ -6,8 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import peter.finalprojectparallel.dto.ChannelDto;
-import peter.finalprojectparallel.dto.UserDto;
-import peter.finalprojectparallel.model.User;
 import peter.finalprojectparallel.service.ChannelService;
 
 import java.util.List;

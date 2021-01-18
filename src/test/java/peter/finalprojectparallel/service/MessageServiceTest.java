@@ -3,10 +3,15 @@ package peter.finalprojectparallel.service;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import peter.finalprojectparallel.dto.MessageResponse;
 import peter.finalprojectparallel.mapper.MessageMapper;
+import peter.finalprojectparallel.model.Channel;
 import peter.finalprojectparallel.model.Message;
 import peter.finalprojectparallel.repository.ChannelRepository;
 import peter.finalprojectparallel.repository.MessageRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MessageServiceTest {
 
@@ -32,11 +37,16 @@ public class MessageServiceTest {
     void getAllByChannelTest() {
         //given
         MessageService messageService = new MessageService(messageRepository, channelRepository, messageMapper, authService);
+        List<Message> mockList = new ArrayList<>();
         Long channelID = 1l;
-        String givenMessage = "Hello";
+        Channel channel = new Channel();
+        channel.setChannelId(channelID);
+        Message givenMessage = new Message();
+        mockList.add(givenMessage);
+        channel.setMessageList(mockList);
         //when
-        Boolean actual = messageService.getAllByChannel(channelID).contains(givenMessage);
+        Mockito.when(messageService.getAllByChannel(channelID)).thenReturn(null);
         //then
-        Assert.assertFalse(actual);
+        Assert.assertEquals(mockList, messageService.getAllByChannel(1l));
     }
 }

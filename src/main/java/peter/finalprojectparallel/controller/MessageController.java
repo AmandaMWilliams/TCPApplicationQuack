@@ -37,8 +37,8 @@ public class MessageController extends TextWebSocketHandler {
     }
 
     @CrossOrigin
-    @MessageMapping("/chat/{channelId}")
-    @SendTo("/channel/{channelId}")
+    @MessageMapping("/chat/{channelId}") // url frontend sends message to
+    @SendTo("/channel/{channelId}") // url you want to subscribe to?
     public ResponseEntity<Void> createWithSock(@RequestBody MessageRequest messageRequest, @DestinationVariable Long channelId) {
         messageService.create(messageRequest, channelId);
         return new ResponseEntity<>(HttpStatus.CREATED);

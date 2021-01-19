@@ -1,4 +1,4 @@
-package peter.finalprojectparallel.service;
+package service;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -9,6 +9,8 @@ import peter.finalprojectparallel.model.Channel;
 import peter.finalprojectparallel.model.Message;
 import peter.finalprojectparallel.repository.ChannelRepository;
 import peter.finalprojectparallel.repository.MessageRepository;
+import peter.finalprojectparallel.service.AuthService;
+import peter.finalprojectparallel.service.MessageService;
 
 import java.util.ArrayList;
 import java.util.List;

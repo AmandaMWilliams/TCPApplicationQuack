@@ -1,4 +1,4 @@
-package peter.finalprojectparallel.service;
+package service;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import peter.finalprojectparallel.dto.ChannelDto;
 import peter.finalprojectparallel.model.Channel;
 import peter.finalprojectparallel.model.User;
+import peter.finalprojectparallel.service.ChannelService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ class ChannelServiceTest {
         //given
         ChannelDto mockDto1 = new ChannelDto();
         ChannelDto mockDto2 = new ChannelDto();
-        List<ChannelDto> mockChannelList= new ArrayList<>();
+        List<ChannelDto> mockChannelList = new ArrayList<>();
         mockChannelList.add(mockDto1);
         mockChannelList.add(mockDto2);
         //when

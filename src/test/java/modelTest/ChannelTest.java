@@ -128,6 +128,4 @@ public class ChannelTest {
         //then
         Assertions.assertEquals(expected, actual);
     }
-
-    //pandas
 }

@@ -129,5 +129,5 @@ public class ChannelTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    //panda
+    //pandas
 }

@@ -62,24 +62,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception{
-//        http
-//                .httpBasic().disable()
-//                .csrf().disable()
-//                .authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-//                .antMatchers("/api/auth/signup").permitAll()
-//                .antMatchers("/api/auth/signin").permitAll()
-//                .antMatchers(HttpMethod.GET,"/posts").permitAll()
-//                .antMatchers(HttpMethod.GET,"/posts/**").permitAll()
-//                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-//                .anyRequest().authenticated().and()
-//                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                .and().cors();
-//        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-//    }
-
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder.userDetailsService(userDetailsService)

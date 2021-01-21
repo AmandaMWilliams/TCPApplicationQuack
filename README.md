@@ -25,7 +25,7 @@ Use Spring Initializr to create a starting point
 Users can:
 
  - sign in with Google
- - send messages to a peer.
+ - send messages to a peer
  - view default channels
  - view all accessible channels
  - view messages live as they are received

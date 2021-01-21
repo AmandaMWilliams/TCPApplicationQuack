@@ -10,10 +10,9 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 
 ### Tech Stack
 
-* Wireframe - Mockflow
-* Business Logic - Java
-* Data Layer - MySQL
-* Cloud - Heroku/AWS
+- Business Logic - Java
+- Data Layer - MySQL
+- Cloud - Heroku/AWS
 
 
 ## Installation

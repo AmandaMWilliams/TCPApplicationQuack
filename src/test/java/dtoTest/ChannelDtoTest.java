@@ -14,4 +14,23 @@ public class ChannelDtoTest {
         //then
         Assertions.assertNotNull(channelDto);
     }
+
+    @Test
+    public void channelDtoOLConstructorTest(){
+        //given
+        ChannelDto channelDto = new ChannelDto();
+        Long testChannelID = 543L;
+        String testChannelName = "TestChannelName";
+        String testDescription = "Test description";
+        Integer testNumberOfMessages = 7;
+        Integer testNumberOfUsers = 4;
+        //when
+        channelDto.setChannelId(testChannelID);
+        channelDto.setChannelName(testChannelName);
+        channelDto.setDescription(testDescription);
+        channelDto.setNumberOfMessages(testNumberOfMessages);
+        channelDto.setNumberOfUsers(testNumberOfUsers);
+        //then
+        Assertions.assertNotNull(channelDto);
+    }
 }

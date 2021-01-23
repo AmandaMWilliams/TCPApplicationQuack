@@ -12,7 +12,7 @@ Purpose - to demonstrate the construction of a full-stacked web-application
 
  * Business Logic - Java
  * Data Layer - MySQL
- * Cloud - Heroku/AWS
+ * Cloud - Heroku/AWS 
 
 
 ## Installation
